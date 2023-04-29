@@ -1,9 +1,9 @@
 /** 
- * Class acts as base of views
+ * @description Class acts as base of views
  */
 class Component {
     /**
-     * @description variables for Component Class
+     * @description variables for Component class
      * size contains width and height in CSS
      * title is the header in the component
      */
