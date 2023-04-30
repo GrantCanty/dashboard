@@ -1,5 +1,5 @@
 /** 
- * @description Class acts as base of views
+ * @description class acts as base of views
  */
 class Component {
     /**
@@ -54,7 +54,7 @@ class Component {
 }
 
 /**
- * @description View for weather
+ * @description view for weather
  */
 class WeatherView extends Component {
     /**
@@ -79,6 +79,9 @@ class WeatherView extends Component {
         this.locations.push(r)
     }
 }
+/**
+ * @description view for sports scores
+ */
 
 class SportsView extends Component {
 
@@ -87,10 +90,14 @@ class SportsView extends Component {
  * @description view for finances
  */
 class FinanceView extends Component {
+    /**
+     * @description variables for class
+     * symbols to track performance
+     */
     symbols: string[] = new Array()
 
     /**
-     * @description constructor for class
+     * @description class constructor
      */
     constructor() {
         super(1,1)
@@ -105,11 +112,29 @@ class FinanceView extends Component {
         this.symbols.push(s)
     }
 }
+/**
+ * @description view for news
+ */
 
 class NewsView extends Component {
 
 }
 
+/**
+ * @description view for calendar
+ */
 class CalendarView extends Component {
+    /**
+     * @description variables for class
+     * date stores today's date
+     */
+    date = new Date()
 
+    /**
+     * @description class constructor
+     */
+    constructor() {
+        super(1, 1)
+        this.title = "News"
+    }
 }
