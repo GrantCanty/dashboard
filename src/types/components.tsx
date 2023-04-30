@@ -83,9 +83,27 @@ class WeatherView extends Component {
 class SportsView extends Component {
 
 }
-
+/**
+ * @description view for finances
+ */
 class FinanceView extends Component {
+    symbols: string[] = new Array()
 
+    /**
+     * @description constructor for class
+     */
+    constructor() {
+        super(1,1)
+        this.title = "Finances"
+    }
+
+    /**
+     * @description function to add symbol to array
+     * @param s symbol to be added to array
+     */
+    add(s: string) {
+        this.symbols.push(s)
+    }
 }
 
 class NewsView extends Component {
