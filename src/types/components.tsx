@@ -1,3 +1,5 @@
+import Region from "./regions"
+
 /** 
  * @description class acts as base of views
  */
@@ -82,7 +84,6 @@ class WeatherView extends Component {
 /**
  * @description view for sports scores
  */
-
 class SportsView extends Component {
 
 }
@@ -115,7 +116,6 @@ class FinanceView extends Component {
 /**
  * @description view for news
  */
-
 class NewsView extends Component {
 
 }
@@ -138,3 +138,5 @@ class CalendarView extends Component {
         this.title = "News"
     }
 }
+
+export default Component;

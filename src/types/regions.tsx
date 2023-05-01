@@ -24,3 +24,5 @@ class Region {
         this.latitude = lat
     }
 }
+
+export default Region;
