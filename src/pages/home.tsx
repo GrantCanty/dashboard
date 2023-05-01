@@ -1,6 +1,6 @@
 import { FC } from "react";
 import View from "../components/view";
-import Component from "../types/view";
+import Component from "../types/views/view";
 
 /**
  * @description Home page
