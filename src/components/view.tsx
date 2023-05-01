@@ -1,12 +1,11 @@
 import { FC } from "react";
-import Component from "../types/components";
-import ComponentProps from "../types/compInterface";
+import ViewProps from "../types/viewInterface";
 
 /**
- * @description view 
+ * @description view component
  * @param {string} title variable for title of the component
  */
-const View: FC<ComponentProps> = ({ component }): JSX.Element => {
+const View: FC<ViewProps> = ({ view }): JSX.Element => {
     
     return(
         <div className="view" >
@@ -14,7 +13,7 @@ const View: FC<ComponentProps> = ({ component }): JSX.Element => {
 
             </div>
             <div className="view-title">
-                {component.title ? <h2>{component.title}</h2> : null}
+                {view.title ? <h2>{view.title}</h2> : null}
             </div>
             <div className="view-main">
 

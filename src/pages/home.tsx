@@ -1,6 +1,6 @@
 import { FC } from "react";
 import View from "../components/view";
-import Component from "../types/components";
+import Component from "../types/view";
 
 /**
  * @description Home page
@@ -16,7 +16,7 @@ const Home: FC = () => {
         <>
             {c.map((comp: Component) => {
                 type Props = {cc: Component}
-                return <View component={comp} />
+                return <View view={comp} />
             })}
         </>
     )

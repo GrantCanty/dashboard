@@ -3,11 +3,11 @@ import Region from "./regions"
 /** 
  * @description class acts as base of views
  */
-class Component {
+class View {
     /**
-     * @description variables for Component class
+     * @description variables for View class
      * size contains width and height in CSS
-     * title is the header in the component
+     * title is the header in the View
      */
     size: [number, number]
     title: string
@@ -58,7 +58,7 @@ class Component {
 /**
  * @description view for weather
  */
-class WeatherView extends Component {
+class WeatherView extends View {
     /**
      * @description Variables for class
      * Region contains all the locations to get weather from
@@ -84,13 +84,13 @@ class WeatherView extends Component {
 /**
  * @description view for sports scores
  */
-class SportsView extends Component {
+class SportsView extends View {
 
 }
 /**
  * @description view for finances
  */
-class FinanceView extends Component {
+class FinanceView extends View {
     /**
      * @description variables for class
      * symbols to track performance
@@ -116,14 +116,14 @@ class FinanceView extends Component {
 /**
  * @description view for news
  */
-class NewsView extends Component {
+class NewsView extends View {
 
 }
 
 /**
  * @description view for calendar
  */
-class CalendarView extends Component {
+class CalendarView extends View {
     /**
      * @description variables for class
      * date stores today's date
@@ -139,4 +139,4 @@ class CalendarView extends Component {
     }
 }
 
-export default Component;
+export default View;
