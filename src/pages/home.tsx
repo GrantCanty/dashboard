@@ -1,5 +1,5 @@
 import { FC } from "react";
-import View from "../components/view";
+import ViewElement from "../components/viewElement";
 import Component from "../types/views/view";
 import "../assets/styles/home.css"
 
@@ -19,7 +19,7 @@ const Home: FC = () => {
         <div className="views-wrapper">
             {c.map((comp: Component, i: number) => {
 
-                return <View view={comp} key={i} />
+                return <ViewElement view={comp} key={i} />
             })}
         </div>
     )
