@@ -1,12 +1,10 @@
 import React, {FC} from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Home from './pages/home';
+import Sidebar from './layouts/sidebar';
 
 const App: FC = () => {
   return (
     <div className="App">
-      <Home />
+      <Sidebar />
     </div>
   );
 }

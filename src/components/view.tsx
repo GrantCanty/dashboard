@@ -6,7 +6,6 @@ import ViewProps from "../types/views/viewInterface";
  * @param {string} title variable for title of the component
  */
 const View: FC<ViewProps> = ({ view }): JSX.Element => {
-    
     return(
         <div className="view" >
             <div className="view-header">
