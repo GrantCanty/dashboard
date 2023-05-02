@@ -1,15 +1,6 @@
-.sidebar-wrapper {
-    width: 100px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-}
-
 .sidebar-main {
     width: 100%;
-    height: 80%;
+    height: 100%;
     border-right: black 2px solid;
-    vertical-align: middle;
+    grid-row: 2;
 }

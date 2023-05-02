@@ -1,6 +1,7 @@
 import { FC } from "react";
 import View from "../components/view";
 import Component from "../types/views/view";
+import "../assets/styles/home.css"
 
 /**
  * @description Home page
@@ -13,12 +14,11 @@ const Home: FC = () => {
     }
 
     return(
-        <>
-            {c.map((comp: Component) => {
-                type Props = {cc: Component}
-                return <View view={comp} />
+        <div className="views-wrapper">
+            {c.map((comp: Component, i: number) => {
+                return <View view={comp} key={i} />
             })}
-        </>
+        </div>
     )
 }
 
