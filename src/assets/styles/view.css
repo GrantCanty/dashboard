@@ -1,5 +1,61 @@
 .view {
     background-color: #f6f6f6;
+    color: #494949;
     border-radius: .9em;
     box-shadow: 0em .3em .3em rgba(0,0,0,.15);
+    font-family: 'Roboto';
+}
+
+.view-title h2 {
+    font-size: 1.3em;
+}
+
+.start-x1 {
+    grid-column-start: 1;
+}
+
+.start-x2 {
+    grid-column-start: 2;
+}
+
+.start-x3 {
+    grid-column-start: 3;
+}
+
+.end-x2 {
+    grid-column-end: 2;
+}
+
+.end-x3 {
+    grid-column-end: 3;
+}
+
+.end-x4 {
+    grid-column-end: 4;
+}
+
+/*y*/
+
+.start-y1 {
+    grid-row-start: 1;
+}
+
+.start-y2 {
+    grid-row-start: 2;
+}
+
+.start-y3 {
+    grid-row-start: 3;
+}
+
+.end-y2 {
+    grid-row-end: 2;
+}
+
+.end-y3 {
+    grid-row-end: 3;
+}
+
+.end-y4 {
+    grid-row-end: 4;
 }

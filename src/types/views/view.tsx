@@ -7,16 +7,20 @@ class View {
      * size contains width and height in CSS
      * title is the header in the View
      */
+    startPos: [number, number]
     size: [number, number]
     title: string
 
     /**
      * @description class constructor
+     * @param {number} x set x position in CSS
+     * @param {number} y set x position in CSS
      * @param {number} w set width in CSS
-     * @param {number} h set height in CSS
+     * @param {number} l set length in CSS
      */
-    constructor(w: number, h: number) {
-        this.size = [w, h]
+    constructor(x: number, y: number, w: number, l: number) {
+        this.startPos = [x, y]
+        this.size = [w, l]
         this.title = ""
     }
 
