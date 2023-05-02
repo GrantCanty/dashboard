@@ -1,5 +1,6 @@
 import { FC } from "react";
 import ViewProps from "../types/views/viewInterface";
+import "../assets/styles/view.css"
 
 /**
  * @description view component
