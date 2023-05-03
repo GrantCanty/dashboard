@@ -25,8 +25,13 @@ const ViewElement: FC<ViewProps> = ({ view }): JSX.Element => {
     )
 }
 
+/**
+ * @description returns the start and end x and y positions as a string
+ * @param {View} view takes view parameter for finding start and end x and y positions
+ * @returns string
+ */
 function createClasses(view: View): string {
-    return `view start-x${view.startPos[0]} end-x${view.startPos[0] + view.size[0]} start-y${view.startPos[1]} end-y${view.startPos[1] + view.size[1]} }`
+    return `view start-x${view.newPos[0]} end-x${view.newPos[0] + view.size[0]} start-y${view.newPos[1]} end-y${view.newPos[1] + view.size[1]} }`
 }
 
 export default ViewElement;

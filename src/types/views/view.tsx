@@ -8,6 +8,7 @@ class View {
      * title is the header in the View
      */
     startPos: [number, number]
+    newPos: [number, number]
     size: [number, number]
     title: string
 
@@ -20,8 +21,25 @@ class View {
      */
     constructor(x: number, y: number, w: number, l: number) {
         this.startPos = [x, y]
+        this.newPos = this.startPos
         this.size = [w, l]
         this.title = ""
+    }
+
+    setNewPos(x: number, y: number) {
+        this.newPos= [x, y]
+    }
+
+    setX(x: number) {
+        this.newPos = [x, this.startPos[1]]
+    }
+
+    setY(y: number) {
+        this.newPos = [this.startPos[0], y]
+    }
+
+    resetPos() {
+        this.newPos = this.startPos
     }
 
     /**
@@ -45,8 +63,8 @@ class View {
      * @description function to set new height in CSS
      * @param {number} h new height value in CSS
      */
-    setHeight(h: number) {
-        this.size = [this.size[0], h]
+    setLength(l: number) {
+        this.size = [this.size[0], l]
     }
 
     /**
@@ -54,6 +72,11 @@ class View {
      */
     resetSize() {
         this.size = [1, 1]
+    }
+
+    reset() {
+        this.resetPos()
+        this.resetSize()
     }
 }
 

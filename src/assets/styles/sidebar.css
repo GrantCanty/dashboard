@@ -4,6 +4,7 @@
     border-right: #494949 2px solid;
     grid-row: 2;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .edit {
@@ -16,7 +17,8 @@
 
 .edit:hover {
     cursor: pointer;
-    background-color: #e1e1e1;
+    background-color: #d931fa;
+    color: white;
 }
 
 .active {

@@ -1,13 +1,39 @@
 .view {
+    /*background: radial-gradient(white, #d931fa);*/
     background-color: #f6f6f6;
     color: #494949;
     border-radius: .9em;
     box-shadow: 0em .3em .3em rgba(0,0,0,.15);
     font-family: 'Roboto';
+    border: 5px solid transparent;
+    transition: .15s;
+    -webkit-transition: .15s;
+}
+
+.view:hover {
+   /*background: radial-gradient(white, #d931fa) no-repeat center;
+    background-size: 2200%;
+    background-position: center;*/
+    /*background: linear-gradient(white, white) padding-box,
+    linear-gradient(138deg, #d931fa, #c831f5 78%) border-box;*/
+    background: linear-gradient(138deg, #d931fa, #c831f5 78%);
+    box-shadow: 0em .3em .3em rgba(0,0,0,.35);
+    transition: .15s;
+    -webkit-transition: .15s;
+    color: white;
+}
+
+.view:active {
+    color: #d931fa;
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(138deg, #d931fa, #c831f5 78%) border-box;
+    transition: .15s;
+    -webkit-transition: .15s;
 }
 
 .view-title h2 {
     font-size: 1.3em;
+    margin-left: 5px;
 }
 
 .start-x1 {
