@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
+import React from 'react'
 
 const useModal = () => {
-    const [isShowing, setIsShowing] = React.useState(false)
+    const [isShowing, setIsShowing] = React.useState<boolean>(false)
 
     function toggle() {
         setIsShowing(!isShowing)
