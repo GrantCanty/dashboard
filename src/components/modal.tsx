@@ -3,11 +3,13 @@ import ReactDOM from "react-dom";
 import "../assets/styles/modal.css"
 
 interface Props {
-    show: boolean | (() => void);
-    setShow: boolean | (() => void);
+    show: boolean;
+    toggle: () => void;
 }
 
-const Modal: FC<Props> =({show, setShow}: Props) => {
+const Modal: FC<Props> =({show, toggle}: Props) => {
+
+    console.log("show: ", show)
 
     if(!show) {
         return null

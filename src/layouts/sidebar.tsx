@@ -8,8 +8,8 @@ import "../assets/styles/sidebar.css"
  */
 
 interface Props {
-    show: boolean | (() => void);
-    setShow: boolean | (() => void);
+    show: boolean;
+    setShow: (() => void);
 }
 
 const Sidebar: FC<Props > = ({show, setShow}) => {
@@ -18,7 +18,7 @@ const Sidebar: FC<Props > = ({show, setShow}) => {
 
     return(
             <div className="sidebar">
-                <div className="edit active" onClick={ () => setShow}>
+                <div className="edit active" onClick={ () => setShow()}>
                     +
                 </div>
             </div>

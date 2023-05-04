@@ -12,7 +12,7 @@ const App: FC = () => {
     <div className="wrapper">
       <Sidebar show={showModal} setShow={toggleShowModal}/>
       <Main />
-      <Modal show={showModal} setShow={toggleShowModal} />
+      <Modal show={showModal} toggle={toggleShowModal} />
     </div>
   );
 }
