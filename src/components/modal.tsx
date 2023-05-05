@@ -20,7 +20,7 @@ const Modal: FC<Props> =({show, toggle}: Props) => {
     return ReactDOM.createPortal(
         <div className="modal-bg">
             <div className="modal">
-
+                <h2>Testinggggg</h2>
             </div>
         </div>,
         document.body
