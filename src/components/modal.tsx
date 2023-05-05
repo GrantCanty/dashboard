@@ -7,9 +7,11 @@ interface Props {
     toggle: () => void;
 }
 
+/**
+ * @description modal component
+ * @param {Props} Props takes props for modal state and state mutator
+ */
 const Modal: FC<Props> =({show, toggle}: Props) => {
-
-    console.log("show: ", show)
 
     if(!show) {
         return null

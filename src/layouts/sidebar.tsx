@@ -1,20 +1,17 @@
 import { FC } from "react";
 import "../assets/styles/sidebar.css"
 
-
+/**
+ * @description props for modal
+ */
+interface Props {
+    setShow: (() => void);
+}
 
 /**
  * @description component for the sidebar
  */
-
-interface Props {
-    show: boolean;
-    setShow: (() => void);
-}
-
-const Sidebar: FC<Props > = ({show, setShow}) => {
-
-    console.log("show: ", show)
+const Sidebar: FC<Props > = ({setShow}: Props) => {
 
     return(
             <div className="sidebar">
