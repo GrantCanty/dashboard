@@ -15,24 +15,6 @@ const App: FC = () => {
       [...prev, v]
     ))
   }
-    
-  /*let cp: Component = new Component(1,1,2,2)
-  cp.title = `Test: ${0}`
-  c.push(cp)
-
-  cp = new Component(3,1,1,1)
-  cp.title = `Test: ${1}`
-  c.push(cp)
-
-  cp = new Component(3,2,1,1)
-  cp.title = `Test: ${2}`
-  c.push(cp)
-
-  cp = new Component(1,3,3,3)
-  cp.title = `Test: ${3}`
-  c.push(cp)*/
-
-  
   
   return (
     <div className="wrapper">

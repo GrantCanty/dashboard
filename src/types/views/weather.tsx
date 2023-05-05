@@ -30,6 +30,10 @@ class WeatherView extends View {
     add(r: Region) {
         this.locations.push(r)
     }
+
+    getTitle(): string {
+        return this.title
+    }
 }
 
 export default WeatherView;

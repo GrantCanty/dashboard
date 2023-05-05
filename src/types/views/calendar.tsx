@@ -21,6 +21,10 @@ class CalendarView extends View {
         super(x, y, w, l)
         this.title = "News"
     }
+
+    getTitle(): string {
+        return this.title
+    }
 }
 
 export default CalendarView;

@@ -8,7 +8,7 @@ class View {
      * title is the header in the View
      */
     startPos: [number, number]
-    newPos: [number, number]
+    currentPos: [number, number]
     size: [number, number]
     title: string
 
@@ -21,25 +21,25 @@ class View {
      */
     constructor(x: number, y: number, w: number, l: number) {
         this.startPos = [x, y]
-        this.newPos = this.startPos
+        this.currentPos = this.startPos
         this.size = [w, l]
         this.title = ""
     }
 
     setNewPos(x: number, y: number) {
-        this.newPos= [x, y]
+        this.currentPos= [x, y]
     }
 
     setX(x: number) {
-        this.newPos = [x, this.startPos[1]]
+        this.currentPos = [x, this.startPos[1]]
     }
 
     setY(y: number) {
-        this.newPos = [this.startPos[0], y]
+        this.currentPos = [this.startPos[0], y]
     }
 
     resetPos() {
-        this.newPos = this.startPos
+        this.currentPos = this.startPos
     }
 
     /**
@@ -77,6 +77,10 @@ class View {
     reset() {
         this.resetPos()
         this.resetSize()
+    }
+
+    getTitle(): string {
+        return ""
     }
 }
 

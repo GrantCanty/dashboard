@@ -5,6 +5,10 @@ import View from "./view";
  */
 class NewsView extends View {
 
+    getTitle(): string {
+        return this.title
+    }
+
 }
 
 export default NewsView;

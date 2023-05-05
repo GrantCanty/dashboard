@@ -29,6 +29,10 @@ class FinanceView extends View {
     add(s: string) {
         this.symbols.push(s)
     }
+
+    getTitle(): string {
+        return this.title
+    }
 }
 
 export default FinanceView;

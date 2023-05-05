@@ -31,7 +31,7 @@ const ViewElement: FC<ViewProps> = ({ view }): JSX.Element => {
  * @returns string
  */
 function createClasses(view: View): string {
-    return `view start-x${view.newPos[0]} end-x${view.newPos[0] + view.size[0]} start-y${view.newPos[1]} end-y${view.newPos[1] + view.size[1]} }`
+    return `view start-x${view.currentPos[0]} end-x${view.currentPos[0] + view.size[0]} start-y${view.currentPos[1]} end-y${view.currentPos[1] + view.size[1]} }`
 }
 
 export default ViewElement;
