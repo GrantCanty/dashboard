@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "../assets/styles/modal.css"
 import View from "../types/views/view";
 import FormComp from "./formComp";
+import ModalForm from "./modalForm";
 
 /**
  * @description props interface for modal component 
@@ -22,21 +23,22 @@ interface Props {
  */
 const Modal: FC<Props> =({show, toggleShow, views}: Props) => {
 
+    const handleChildClick = (e: React.FormEvent) => {
+        e.stopPropagation()
+    }
+
     if(!show) {
         return null
     }
 
     return ReactDOM.createPortal(
         <div className="modal-bg" onClick={() => toggleShow()}>
-            <div className="modal">
+            <div className="modal" onClick={(e) => handleChildClick(e)}>
                 <div className="modal-title">
                     <h2>Edit Layout</h2>
                 </div>
                 <div className="modal-body">
-                    {views.map((view) => {
-                        console.log(view.getTitle())
-                        return <FormComp view={view} />
-                    })}
+                    <ModalForm views={views} />
                 </div>
             </div>
         </div>,

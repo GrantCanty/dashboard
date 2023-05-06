@@ -7,7 +7,7 @@ import View from "../types/views/view";
  * @description view component
  * @param {string} title variable for title of the component
  */
-const ViewElement: FC<ViewProps> = ({ view }): JSX.Element => {
+const ViewElement: FC<ViewProps> = ({ view }: ViewProps): JSX.Element => {
     let classes: string = createClasses(view)
 
     return(
