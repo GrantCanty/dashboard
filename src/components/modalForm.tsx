@@ -1,16 +1,27 @@
-import { FC } from "react";
+import React, { FC, useEffect } from "react";
 import View from "../types/views/view";
 
 interface Props {
-    views: View[]
+    views: Map<string, View>
 }
 
 const ModalForm: FC<Props> =({views}: Props) => {
 
+    const [tmpViews, setTmpViews] = React.useState<Map<string, View>>(new Map())
+    
+    useEffect(() => {
+        setTmpViews(views)
+    }, [])
+    
+    let arr: string[] = [...tmpViews.keys()]
+
     return (
         <form>
-            {views.map((c, i) => {
-                return <input type="text" value={`${c.getTitle()} input`} key={i}></input>
+            {arr.map((val: string, i: number) => {
+                let c: View | undefined = views.get(val)
+                if(c !== undefined) {
+                    return <input type="text" value={c.getTitle()} key={i}></input>
+                }
             })}
         </form>
     )

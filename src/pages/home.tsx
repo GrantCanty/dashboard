@@ -5,15 +5,17 @@ import "../assets/styles/home.css"
 import WeatherView from "../types/views/weather";
 
 interface Props {
-    c: View[]
-    push: (v: View) => void
+    views: Map<string, View>
+    setViews: (v: Map<string, View>) => void
 }
 
 /**
  * @description Home page
  */
-const Home: FC<Props> = ({c, push}: Props) => {
-
+const Home: FC<Props> = ({views, setViews}: Props) => {
+    
+    const tmpViews: Map<string, View> = new Map()
+    
     useEffect(() => {
         for (let i = 0; i < 9; i++) {
             /*let cp: Component = new Component(1,1,2,2)
@@ -34,15 +36,20 @@ const Home: FC<Props> = ({c, push}: Props) => {
             
             let cp: WeatherView = new WeatherView((i%3)+1, Math.floor(i/3) +1, 1, 1)
             cp.title = `Test: ${i}`
-            push(cp)
+            tmpViews.set(i.toString(), cp)
         }
+        setViews(new Map<string, View>(tmpViews))
     }, [])
+    
+    let arr: string[] = [...views.keys()]
 
     return(
         <div className="views-wrapper">
-            {c.map((comp: View, i: number) => {
-
-                return <ViewElement view={comp} key={i} />
+            {arr.map((val: string, i: number) => {
+                let tmp: View | undefined = views.get(val)
+                if(tmp !== undefined) {
+                    return <ViewElement view={tmp} key={i} />
+                }
             })}
         </div>
     )

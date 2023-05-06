@@ -14,7 +14,7 @@ import ModalForm from "./modalForm";
 interface Props {
     show: boolean;
     toggleShow: () => void;
-    views: View[]
+    views: Map<string, View>
 }
 
 /**
